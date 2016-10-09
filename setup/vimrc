@@ -68,6 +68,7 @@ vnoremap <S-Tab> <gv
 autocmd vimenter * if !argc() | NERDTree | endif
 let g:NERDTreeShowHidden=1
 let Tlist_Auto_Update=1
+let g:jedi#show_call_signatures = "0"
 
 "Supertab
 let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
