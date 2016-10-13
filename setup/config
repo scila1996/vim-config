@@ -35,12 +35,6 @@ git clone https://github.com/tomasr/molokai.git
 # Python jedi - autocomplete for python
 git clone --recursive https://github.com/davidhalter/jedi-vim.git
 #
-# Javacomplete - autocomplete for java
-git clone https://github.com/vim-scripts/javacomplete.git
-#
-# Vim-tools - My plugins
-git clone https://github.com/scila1996/vim-tools.git
-#
 
 #config file
 path=~/.vimrc

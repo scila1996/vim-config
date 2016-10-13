@@ -32,13 +32,15 @@ execute pathogen#infect()
 autocmd CursorMovedI * if pumvisible() == 0|pclose|endif
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
-"Java - autocomplete
-autocmd FileType java
-    \ setlocal omnifunc=javacomplete#Complete |
-    \ setlocal completefunc=javacomplete#CompleteParamsInfo
-
 "Shorcut key mapping
 
+"F9 key -> run script (if has shebang)
+function! Run_script()
+    if getline(1) =~ "^#!"
+        nnoremap <buffer> <F9> :update <bar> !tput clear; cd "%:p:h"; "./%:p:t" <cr>
+    endif
+endfunction
+autocmd FileType * call Run_script()
 "Ctrl + a -> Select All Text
 map <C-a> <esc>ggVG<CR>
 "F2 to write/update file
@@ -83,8 +85,7 @@ let g:lightline = {
       \     'left' : [ [ 'mode' ], [ 'filename' ], [ 'mod' ] ]
       \ },
       \ 'component': {
-      \   'filename': '%{expand("%:p")}',
-      \   'mod'     : '%{&readonly?"[readonly]":&modified?"+":""}'
+      \     'mod'     : '%{&readonly?"[readonly]":&modified?"+":""}'
       \ }
       \ }
 
