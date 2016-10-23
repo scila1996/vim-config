@@ -34,16 +34,6 @@ autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
 "Shorcut key mapping
 
-"F9 key -> run script (if has shebang)
-
-function! Run_script()
-    if getline(1) =~ "^#!"
-        nnoremap <buffer> <F9> :update <bar> !tput clear; cd "%:p:h"; "./%:p:t" <cr>
-    endif
-endfunction
-
-autocmd FileType * call Run_script()
-
 "Ctrl + a -> Select All Text
 map <C-a> <esc>ggVG<CR>
 "F2 to write/update file
@@ -74,6 +64,7 @@ autocmd vimenter * if !argc() | NERDTree | endif
 let g:NERDTreeShowHidden=1
 let Tlist_Auto_Update=1
 let g:jedi#show_call_signatures = "0"
+autocmd Filetype java setlocal omnifunc=javacomplete#Complete
 
 "Supertab
 let g:SuperTabDefaultCompletionType = "<C-X><C-O>"

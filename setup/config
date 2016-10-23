@@ -36,6 +36,9 @@ git clone https://github.com/tomasr/molokai.git
 git clone --recursive https://github.com/davidhalter/jedi-vim.git
 #
 
+# My plugin
+git clone https://github.com/scila1996/vim-myplugin.git
+
 #config file
 path=~/.vimrc
 cp -f "$cpath/vimrc" "$path"
