@@ -79,7 +79,7 @@ let g:lightline = {
       \     'left' : [ [ 'mode' ], [ 'filename' ], [ 'mod' ] ]
       \ },
       \ 'component': {
-      \     'filename': '"%{expand("%")}"',
+      \     'filename': '"%{expand("%:p:t")}"',
       \     'mod'     : '%{&readonly?"[readonly]":&modified?"+":""}'
       \ }
       \ }
