@@ -48,6 +48,9 @@ imap <C-@> <C-Space>
 "Switch tab bar
 noremap <C-Right> gt
 noremap <C-Left> gT
+"UNDO and REDO
+nnoremap <C-z> u
+nnoremap <C-y> <C-r>
 "Close VIM no save
 map <silent> <C-w> :q! <CR>
 "Toggle Show/Hide NERDTree Explorer
