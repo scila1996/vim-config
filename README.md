@@ -1,6 +1,6 @@
 # vim-config
 
-vim settings 
+vim settings
 
 ## Installation
 
