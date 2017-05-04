@@ -73,11 +73,10 @@ autocmd Filetype java setlocal omnifunc=javacomplete#Complete
 let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
 
 "Vim Theme
-colors molokai
-let g:molokai_original = 1
 let g:rehash256 = 1
+colors molokai
 let g:lightline = {
-      \ 'colorscheme': 'jellybeans',
+      \ 'colorscheme': 'wombat',
       \ 'active' : {
       \     'left' : [ [ 'mode' ], [ 'filename' ], [ 'mod' ] ]
       \ },
@@ -86,6 +85,5 @@ let g:lightline = {
       \     'mod'     : '%{&readonly?"[readonly]":&modified?"+":""}'
       \ }
       \ }
-
 "-------- END CONFIG ----------"
-
+"#
